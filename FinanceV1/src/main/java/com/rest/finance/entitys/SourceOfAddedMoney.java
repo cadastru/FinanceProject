@@ -14,7 +14,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name="sourceofaddedmoney")
+//@Table(name="sourceofaddedmoney")
 public class SourceOfAddedMoney implements Serializable {
 
 	/**
@@ -23,7 +23,7 @@ public class SourceOfAddedMoney implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private String sourceName;
 	

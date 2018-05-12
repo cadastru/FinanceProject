@@ -16,7 +16,7 @@ import javax.persistence.TemporalType;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name="addedmoney")
+//@Table(name="addedmoney")
 public class AddedMoney implements Serializable {
 
 	/**
@@ -25,7 +25,7 @@ public class AddedMoney implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
 	private Double sumaDeBani;
