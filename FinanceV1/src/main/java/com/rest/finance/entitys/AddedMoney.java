@@ -30,6 +30,7 @@ public class AddedMoney implements Serializable {
 	
 	private Double sumaDeBani;
 	
+	
 	@Temporal(TemporalType.DATE)
 	private Calendar dataPrimirii;
 	
@@ -37,6 +38,10 @@ public class AddedMoney implements Serializable {
 	@JoinColumn(name="sources")
 //	@JsonIgnore
 	private SourceOfAddedMoney sourceOfAddedMoney;
+	
+	@ManyToOne
+	@JoinColumn(name="valuta")
+	private Valuta valuta;
 
 	public Long getId() {
 		return id;
@@ -69,5 +74,14 @@ public class AddedMoney implements Serializable {
 	public void setSourceOfAddedMoney(SourceOfAddedMoney sourceOfAddedMoney) {
 		this.sourceOfAddedMoney = sourceOfAddedMoney;
 	}
+
+	public Valuta getValuta() {
+		return valuta;
+	}
+
+	public void setValuta(Valuta valuta) {
+		this.valuta = valuta;
+	}
+	
 	
 }
